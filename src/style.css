@@ -1,0 +1,134 @@
+:root {
+  font-family: Jost, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1150px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+ul {
+  list-style: none;
+}
+
+/* hero */
+.hero {
+  background-image: url("./assets/img/hero_bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 44px 0;
+}
+
+.logo {
+  display: flex;
+  gap: 15px;
+  padding-top: 11px;
+  margin-right: 22px;
+}
+
+.logo_text {
+  padding-top: 5px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.menu {
+  padding-top: 3px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  border-radius: 30px;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.burger_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.burger_line {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.burger_menu.active .burger_line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.burger_menu.active .burger_line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger_menu.active .burger_line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.nav_items {
+  display: none;
+  gap: 23px;
+
+  transition: all 0.3s;
+}
+
+.nav_link {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav.active {
+  background-color: #00000050;
+}
+
+.nav_items.active {
+  display: flex;
+}
+
+.phone {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
