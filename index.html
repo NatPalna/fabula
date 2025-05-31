@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Тестовое задание</title>
     <script defer type="module" src="./src/main.js"></script>
   </head>
   <body>
@@ -59,8 +59,8 @@
             </div>
           </header>
           <div class="hero_title">
-            <h1>Сайт для тестовой верстки чартерной авиакомпании</h1>
-            <p>
+            <h1 class="title">Сайт для тестовой верстки чартерной авиакомпании</h1>
+            <p class="description">
               Jetair — лидер в области чартерных VIP перелетов по всему миру.
               Компания основана в 1996 году.
             </p>
@@ -71,14 +71,25 @@
               alt="Номер 1"
               class="hero_icon"
             />
-            <strong>Лидер рынка</strong>
-            <p>
+            <div class="hero_info_text">
+            <strong class="hero_info_title">Лидер рынка</strong>
+            <p class="hero_info_description">
               №1 среди чартерных авиакомпаний по версии Flight Scaner magazine
-            </p>
+            </p></div>
           </div>
-          <form action="">
-            <input type="email" placeholder="Ваш email" />
-            <button type="submit">Подписаться</button>
+          <form action="" class="hero_form form">
+            <h2 class="form_title title">Забронировать частный борт</h2>
+            <fieldset>
+              <input type="text" placeholder="Имя" class="form_input" />
+            <input type="text" placeholder="Компания" class="form_input" />
+            <input type="tel" placeholder="Телефон" class="form_input" />
+            <button type="submit" class="form_button">Забронировать</button>
+            </fieldset>
+            
+            <label class="form_agreement">
+              <input type="checkbox" name="agreement" id="agreement_bottom" class="form_checkbox" />
+              Я даю согласие на обработку своих <a href="#" target="_blank" rel="noopener noreferrer" class="agreement_link">персональных данных</a>
+            </label>
           </form>
         </div>
       </section>
@@ -270,26 +281,59 @@
           <h2 class="section_title">Контакты</h2>
           <div class="contacts_inner">
             <div class="contacts_info">
-              <div class="contacts_address">
-                <span class="contacts_address_title">Адрес:</span>
-                <span class="contacts_address_text">г. Москва, ул. Пушкинская, 12</span>
-              </div>
-              <div class="contacts_schedule">
-                <span class="contacts_schedule_title">График работы:</span>
-                <span class="contacts_schedule_text">Пн-Пт: с 10:00 до 21:00</span>
-                <span class="contacts_schedule_text">Сб-Вс: с 11:00 до 21:00</span>
-              </div>
               <div class="contacts_phone">
-                <span class="contacts_phone_title">Телефон:</span>
-                <span class="contacts_phone_text">+7 (123) 456-78-90</span>
+                <span class="contacts_phone_title">8 800 123-45-67</span>
+                <span class="contacts_phone_text">+7 123 456-78-90</span>
+              </div>
+              <div class="contacts_address">
+                <strong class="contacts_title">Адрес</strong>
+                <span class="contacts_address_text">Московская обл., г. Химки, а/п Шереметьево, 
+                  терминал А</span>
               </div>
             </div>
-            <div class="contacts_map"></div>
+              <div class="contacts_email">
+                <strong class="contacts_title">E-mail</strong>
+                <span class="contacts_schedule_text">mail@jetair.ru</span>
+              </div>
+            </div>
+            <div class="contacts_map">
+              <div style="position:relative;overflow:hidden;">
+                <a href="https://yandex.ru/maps/org/mezhdunarodny_aeroport_sheremetyevo_terminal_a/1079286992/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">
+                  Международный аэропорт Шереметьево, терминал А
+                </a>
+                <a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/category/airport_terminal/206650152999/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
+                  Терминал аэропорта в Москве и Московской области
+                </a>
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=37.444018%2C55.973925&mode=search&oid=1079286992&ol=biz&sctx=ZAAAAAgDEAAaKAoSCQHcLF4sQkZAESkGSDSBWkhAEhIJWaSJd4Cn5D8RXwmkxK7tzT8iBgABAgMEBSgKOABAoocGSAFqAnJ1nQHNzMw9oAEAqAEAvQGmN6MawgEkypmOjQTQudKCBPuZ8OgDuOOH%2FwOzlY2AqQSj5e68BL%2FIxawZggIW0YjQtdGA0LXQvNC10YLRjNC10LLQvooCAJICAJoCDGRlc2t0b3AtbWFwcw%3D%3D&sll=37.444018%2C55.973925&sspn=0.132931%2C0.051272&text=%D1%88%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%82%D1%8C%D0%B5%D0%B2%D0%BE&z=13.95" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
+                </iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section id="form" class="form"></section>
+      <section id="form" class="form">
+        <div class="container">
+          <h2 class="section_title">Забронировать частный борт</h2>
+          <form action="" class="bottom_form form">
+            <fieldset>
+              <input type="text" placeholder="Имя" />
+            <input type="text" placeholder="Компания" />
+            <input type="tel" placeholder="Телефон" />
+            <button type="submit">Забронировать</button>
+            </fieldset>
+            <input type="checkbox" name="agreement" id="agreement_bottom">
+            <label for="agreement_bottom">Я даю согласие на обработку своих <a href="#" target="_blank" rel="noopener noreferrer" class="agreement_link">персональных данных</a></label>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="container">
+        <div class="footer_inner">
+          <div class="copiwrite">© Jetair, 1996-2021</div>
+          <div class="policy"><a href="#" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a></div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
