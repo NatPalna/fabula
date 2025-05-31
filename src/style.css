@@ -33,6 +33,7 @@ ul {
 
 /* hero */
 .hero {
+  padding: 44px 0 125px;
   background-image: url("./assets/img/hero_bg.jpg");
   background-size: cover;
   background-position: center;
@@ -42,7 +43,6 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 44px 0;
 }
 
 .logo {
