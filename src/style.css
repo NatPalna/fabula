@@ -35,6 +35,32 @@ fieldset {
   border: none;
 }
 
+.section_title {
+  font-size: 36px;
+  font-weight: 800;
+  padding-top: 100px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.section_description {
+  max-width: 730px;
+  width: 100%;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.section_offer {
+  max-width: 552px;
+  width: 100%;
+  margin: 0 auto 40px;
+  font-size: 27px;
+  font-weight: 400;
+  text-align: center;
+}
+
 /* hero */
 .hero {
   padding: 44px 0 125px;
@@ -334,3 +360,5 @@ fieldset {
   font-size: 24px;
   color: #000;
 }
+
+/* наши услуги */
