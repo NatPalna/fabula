@@ -45,8 +45,8 @@ document
     }
 
     if (isValid) {
+      // this.submit();
       showSuccessModal();
-      this.submit();
     }
   });
 
