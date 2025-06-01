@@ -184,6 +184,10 @@ fieldset {
   margin-bottom: 26px;
 }
 
+.form_group {
+  flex: 0 0 255px;
+}
+
 .form_input {
   width: 255px;
   height: 50px;
@@ -191,6 +195,7 @@ fieldset {
   border-radius: 5px;
   border: none;
   background-color: #c4c4c4;
+  font-family: Jost, sans-serif;
   color: #808080;
   font-size: 16px;
 }
@@ -204,12 +209,14 @@ fieldset {
 }
 
 .form_button {
+  flex: 0 0 255px;
   width: 255px;
   height: 50px;
   border-radius: 5px;
   border: none;
   background-color: #15468d;
   color: #fff;
+  font-family: Jost, sans-serif;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
@@ -235,7 +242,13 @@ fieldset {
   border-radius: 4px;
   border: 1px solid #fff;
   cursor: pointer;
-  transition: all 0.3s;
+  position: relative;
+}
+
+.form_checkbox:checked {
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.83728 0.157712C10.0542 0.367994 10.0542 0.708929 9.83728 0.919211L3.72617 6.84229C3.50921 7.05257 3.15745 7.05257 2.9405 6.84229L0.162718 4.14998C-0.0542395 3.9397 -0.0542395 3.59876 0.162718 3.38848C0.379676 3.1782 0.731435 3.1782 0.948393 3.38848L3.33333 5.70004L9.05161 0.157712C9.26857 -0.0525706 9.62032 -0.0525706 9.83728 0.157712Z' fill='white'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .agreement_link {
@@ -254,4 +267,70 @@ fieldset {
 .agreement_link:visited {
   color: #808080;
   border-color: #808080;
+}
+
+.form_error {
+  color: #ea7171;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+.form_error.active {
+  display: block;
+}
+
+.form_input.invalid {
+  border: 1px solid #ea7171;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal_close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+}
+
+.modal_title {
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #000;
+}
+
+.modal_content {
+  margin-bottom: 80px;
+  font-size: 24px;
+  color: #000;
 }

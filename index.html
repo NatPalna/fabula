@@ -77,20 +77,44 @@
               №1 среди чартерных авиакомпаний по версии Flight Scaner magazine
             </p></div>
           </div>
-          <form action="" class="hero_form form">
+          <form action="" class="hero_form form" id="reservationForm">
             <h2 class="form_title title">Забронировать частный борт</h2>
             <fieldset>
-              <input type="text" placeholder="Имя" class="form_input" />
-            <input type="text" placeholder="Компания" class="form_input" />
-            <input type="tel" placeholder="Телефон" class="form_input" />
-            <button type="submit" class="form_button">Забронировать</button>
+              <div class="form_group">
+                <input type="text" placeholder="Имя" class="form_input" id="name"  />
+                <div class="form_error" id="nameError">Пожалуйста, введите ваше имя</div>
+              </div>
+              <div class="form_group">
+                <input type="text" placeholder="Компания" class="form_input"  />
+              </div>
+              <div class="form_group">
+                <input type="tel" placeholder="Телефон" class="form_input" id="phone" />
+                <div class="form_error" id="phoneError">Пожалуйста, введите корректный телефон в формате +7 (___) ___-__-__</div>
+              </div>
+              <button type="submit" class="form_button">Забронировать</button>
             </fieldset>
-            
-            <label class="form_agreement">
-              <input type="checkbox" name="agreement" id="agreement_bottom" class="form_checkbox" />
-              Я даю согласие на обработку своих <a href="#" target="_blank" rel="noopener noreferrer" class="agreement_link">персональных данных</a>
-            </label>
+            <div class="checkbox-group">
+              <label class="form_agreement">
+                <input type="checkbox" name="agreement" id="agreement_top" class="form_checkbox"  />
+              Я даю согласие на обработку своих 
+              <a href="#" target="_blank" rel="noopener noreferrer" class="agreement_link">
+                персональных данных
+              </a>
+              </label>
+              <div class="form_error" id="agreeError">Необходимо ваше согласие</div>
+            </div>
           </form>
+          <div class="modal-overlay" id="successModal">
+            <div class="modal">
+                <span class="modal_close">
+                  <img src="./src/assets/img/modal_close.svg" />
+                </span>
+                <h3 class="modal_title">Спасибо за заявку!</h3>
+                <div class="modal_content">
+                    Мы свяжемся с вами в ближайшее время
+                </div>
+            </div>
+        </div>
         </div>
       </section>
       <section id="services" class="services">
