@@ -9,9 +9,11 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тестовое задание</title>
+    
     <script defer type="module" src="./src/main.js"></script>
   </head>
   <body>
@@ -129,7 +131,7 @@
             опыт и знание всех нюансов позволяют нам осуществить любое пожелание
             клиента. Для нас нет ничего невозможного.
           </div>
-          <ul class="services_list ">
+          <ul class="services_list desktop-layout">
             <li class="services_item">
               <p class="services_text">Чартерные рейсы</p>
               <img
@@ -163,6 +165,50 @@
               />
             </li>
           </ul>
+          <div class="swiper swiper_services mobile-layout">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="services_item">
+                  <p class="services_text">Чартерные рейсы</p>
+                <img
+                  src="./src/assets/img/services_img_1.jpg"
+                  alt="Чартерные рейсы"
+                  class="services_img"
+                />
+              </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="services_item">
+                  <p class="services_text">Аренда вертолета</p>
+                <img
+                  src="./src/assets/img/services_img_2.jpg"
+                  alt="Аренда вертолета"
+                  class="services_img"
+                /></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="services_item">
+                  <p class="services_text">Перевозка ценностей</p>
+                  <img
+                    src="./src/assets/img/services_img_3.jpg"
+                    alt="Перевозка ценностей"
+                    class="services_img"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="services_item">
+                <p class="services_text">Трансфер и сопровождение</p>
+              <img
+                src="./src/assets/img/services_img_4.jpg"
+                alt="Трансфер и сопровождение"
+                class="services_img"
+              />
+            </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </section>
       <section id="about" class="about">
@@ -361,5 +407,14 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper Services-->
+    <script>
+      var swiper = new Swiper(".swiper_services", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
   </body>
 </html>
