@@ -30,29 +30,31 @@
 
             <div class="menu">
               <nav class="nav">
-                <div class="burger_menu">
-                  <span class="burger_line"></span>
-                  <span class="burger_line"></span>
-                  <span class="burger_line"></span>
-                </div>
+                <div class="nav_inner">
+                  <div class="burger_menu">
+                    <span class="burger_line"></span>
+                    <span class="burger_line"></span>
+                    <span class="burger_line"></span>
+                  </div>
 
-                <ul class="nav_items">
-                  <li class="nav_item">
-                    <a href="#services" class="nav_link">Наши услуги</a>
-                  </li>
-                  <li class="nav_item">
-                    <a href="#about" class="nav_link">Компания</a>
-                  </li>
-                  <li class="nav_item">
-                    <a href="#airpark" class="nav_link">Наш авиапарк</a>
-                  </li>
-                  <li class="nav_item">
-                    <a href="#clients" class="nav_link">Клиенты</a>
-                  </li>
-                  <li class="nav_item">
-                    <a href="#contacts" class="nav_link">Контакты</a>
-                  </li>
-                </ul>
+                  <ul class="nav_items">
+                    <li class="nav_item">
+                      <a href="#services" class="nav_link">Наши услуги</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="#about" class="nav_link">Компания</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="#airpark" class="nav_link">Наш авиапарк</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="#clients" class="nav_link">Клиенты</a>
+                    </li>
+                    <li class="nav_item">
+                      <a href="#contacts" class="nav_link">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
               </nav>
 
               <a href="tel:+71234567890" class="phone">+7 (123) 456-78-90</a>
@@ -91,7 +93,8 @@
                 <input type="tel" placeholder="Телефон" class="form_input" id="phone" />
                 <div class="form_error" id="phoneError">Пожалуйста, введите корректный телефон в формате +7 (___) ___-__-__</div>
               </div>
-              <button type="submit" class="form_button">Забронировать</button>
+              <div class="form_group">
+              <button type="submit" class="form_button">Забронировать</button></div>
             </fieldset>
             <div class="checkbox-group">
               <label class="form_agreement">
@@ -126,38 +129,38 @@
             опыт и знание всех нюансов позволяют нам осуществить любое пожелание
             клиента. Для нас нет ничего невозможного.
           </div>
-          <ul class="services_list">
+          <ul class="services_list ">
             <li class="services_item">
+              <p class="services_text">Чартерные рейсы</p>
               <img
                 src="./src/assets/img/services_img_1.jpg"
                 alt="Чартерные рейсы"
                 class="services_img"
               />
-              <span>Чартерные рейсы</span>
             </li>
             <li class="services_item">
+              <p class="services_text">Аренда вертолета</p>
               <img
                 src="./src/assets/img/services_img_2.jpg"
                 alt="Аренда вертолета"
                 class="services_img"
               />
-              <span>Аренда вертолета</span>
             </li>
             <li class="services_item">
+              <p class="services_text">Перевозка ценностей</p>
               <img
                 src="./src/assets/img/services_img_3.jpg"
                 alt="Перевозка ценностей"
                 class="services_img"
               />
-              <span>Перевозка ценностей</span>
             </li>
             <li class="services_item">
+              <p class="services_text">Трансфер и сопровождение</p>
               <img
                 src="./src/assets/img/services_img_4.jpg"
                 alt="Трансфер и сопровождение"
                 class="services_img"
               />
-              <span>Трансфер и сопровождение</span>
             </li>
           </ul>
         </div>
@@ -355,5 +358,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
