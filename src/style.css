@@ -408,6 +408,7 @@ fieldset {
   display: flex;
   align-items: flex-start;
   gap: 25px;
+  margin-bottom: 150px;
 }
 
 .about_item {
@@ -418,6 +419,34 @@ fieldset {
   justify-content: center;
   gap: 20px;
   font-size: 16px;
+}
+
+.airpark {
+  background-color: #000;
+  color: #fff;
+}
+
+.airpark_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+  padding-bottom: 150px;
+}
+
+.airpark_item {
+  flex: 0 1 calc(100% / 3 - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 16px;
+}
+
+.airpark_img {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1150px) {
@@ -565,5 +594,18 @@ fieldset {
   .swiper-pagination-bullet-active {
     background: #329fd9 !important;
     opacity: 1 !important;
+  }
+
+  .about_list {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .about_item {
+    flex: 0 1 calc(50% - 10px);
+  }
+
+  .airpark_item {
+    flex: 0 1 100%;
   }
 }
