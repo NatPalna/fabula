@@ -274,6 +274,7 @@ fieldset {
 }
 
 .form_checkbox {
+  flex: 0 0 16px;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -611,6 +612,7 @@ fieldset {
   border: none;
 }
 
+/* форма */
 .section_form {
   background-color: #000;
   color: #fff;
@@ -621,6 +623,19 @@ fieldset {
   font-size: 36px;
   font-weight: 800;
   margin-bottom: 40px;
+}
+
+/* footer */
+.footer_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.policy_link {
+  color: #000;
+  text-decoration: none;
 }
 
 /* MEDIA QUERIES */
@@ -795,9 +810,17 @@ fieldset {
     height: 100%;
   }
 
+  .services .swiper-wrapper {
+    padding: 0;
+  }
+
   .services .swiper-slide {
-    text-align: center;
+    /* text-align: center; */
     font-size: 18px;
+  }
+
+  .services_item {
+    font-size: 24px;
   }
 
   .services .swiper-slide img {
@@ -805,6 +828,10 @@ fieldset {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .services .swiper-pagination {
+    bottom: 20px;
   }
 
   .services .swiper-pagination-bullet {
@@ -833,11 +860,100 @@ fieldset {
   .contacts_wrapper {
     flex-direction: column;
   }
+
+  .footer_inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
 
 @media screen and (max-width: 560px) {
   .container {
     max-width: 320px;
     width: 100%;
+  }
+
+  .hero {
+    padding: 20px 0 50px 0;
+  }
+
+  .hero_title {
+    width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .hero_info {
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  .hero_info_title {
+    font-size: 20px;
+  }
+
+  .form_title {
+    font-size: 22px;
+  }
+
+  .form_input,
+  .form_button {
+    height: 40px;
+  }
+
+  .form_agreement {
+    align-items: flex-start;
+  }
+
+  .form_checkbox {
+    margin-top: 5px;
+  }
+
+  .section_title {
+    padding-top: 50px;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .section_description {
+    margin-bottom: 20px;
+  }
+
+  .section_offer {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .about_list {
+    margin-bottom: 40px;
+  }
+
+  .airpark_list {
+    padding-bottom: 40px;
+  }
+
+  .mySwiper2 {
+    margin-top: 40px;
+  }
+
+  .clients {
+    padding-bottom: 40px;
+  }
+
+  .contacts {
+    padding-bottom: 50px;
+  }
+
+  .contacts_phone {
+    font-size: 20px;
+  }
+
+  .section_form {
+    padding-bottom: 50px;
   }
 }
