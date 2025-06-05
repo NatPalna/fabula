@@ -81,45 +81,52 @@
               №1 среди чартерных авиакомпаний по версии Flight Scaner magazine
             </p></div>
           </div>
-          <form action="" class="hero_form form" id="reservationForm">
+          <form action="" class="form" id="reservationForm1">
             <h2 class="form_title title">Забронировать частный борт</h2>
             <fieldset>
               <div class="form_group">
-                <input type="text" placeholder="Имя" class="form_input" id="name"  />
-                <div class="form_error" id="nameError">Пожалуйста, введите ваше имя</div>
+                <input type="text" placeholder="Имя" class="form_input" id="name1" />
+                <div class="form_error" id="nameError1">Пожалуйста, введите ваше имя</div>
               </div>
               <div class="form_group">
-                <input type="text" placeholder="Компания" class="form_input"  />
+                <input type="text" placeholder="Компания" class="form_input" />
               </div>
               <div class="form_group">
-                <input type="tel" placeholder="Телефон" class="form_input" id="phone" />
-                <div class="form_error" id="phoneError">Пожалуйста, введите корректный телефон в формате +7 (___) ___-__-__</div>
+                <input type="tel"
+                       placeholder="Телефон" 
+                       class="form_input" 
+                       id="phone1" 
+                />
+                <div class="form_error" id="phoneError1">Пожалуйста, введите корректный телефон в формате +7 (___) ___-__-__</div>
               </div>
               <div class="form_group">
-              <button type="submit" class="form_button">Забронировать</button></div>
+                <button type="button" class="form_button" onclick="validateForm('reservationForm1')">
+                  Забронировать
+                </button>
+              </div>
             </fieldset>
             <div class="checkbox-group">
               <label class="form_agreement">
-                <input type="checkbox" name="agreement" id="agreement_top" class="form_checkbox"  />
-              Я даю согласие на обработку своих 
-              <a href="#" target="_blank" rel="noopener noreferrer" class="agreement_link">
-                персональных данных
-              </a>
+                <input type="checkbox" name="agreement" id="agreement1" class="form_checkbox" />
+                <span>
+                  Я даю согласие на обработку своих 
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="agreement_link">
+                    персональных данных
+                  </a>
+                </span>
               </label>
-              <div class="form_error" id="agreeError">Необходимо ваше согласие</div>
+              <div class="form_error" id="agreeError1">Необходимо ваше согласие</div>
             </div>
           </form>
           <div class="modal-overlay" id="successModal">
             <div class="modal">
-                <span class="modal_close">
-                  <img src="./src/assets/img/modal_close.svg" />
-                </span>
-                <h3 class="modal_title">Спасибо за заявку!</h3>
-                <div class="modal_content">
-                    Мы свяжемся с вами в ближайшее время
-                </div>
+              <img src="./src/assets/img/modal_close.svg" class="modal_close" />
+              <h3 class="modal_title">Спасибо за заявку!</h3>
+              <div class="modal_content">
+                  Мы свяжемся с вами в ближайшее время
+              </div>
             </div>
-        </div>
+          </div>
         </div>
       </section>
       <section id="services" class="services">
@@ -349,8 +356,10 @@
               <div class="swiper-slide">
                 <div class="client_review">
                   <div class="review_info">
-                    <img src="./src/assets/img/clients_1.png" alt="Транснефть" class="clients_img">
-                    <div class="clients_text">
+                    <div class="clients_img review_info__inner">
+                      <img src="./src/assets/img/clients_1.png" alt="Транснефть">
+                    </div>
+                    <div class="clients_text review_info__inner">
                       <strong class="clients_name">Фамилия И. О.</strong>
                       <p class="clients_position">Управляющий Транснефть</p>
                     </div>
@@ -363,11 +372,14 @@
               <div class="swiper-slide">
                 <div class="client_review">
                   <div class="review_info">
-                  <img src="./src/assets/img/clients_2.png" alt="Леруа мерлен" class="clients_img">
-                  <div class="clients_text">
-                    <strong class="clients_name">Петренко С. А.</strong>
-                    <p class="clients_position">Управляющий ООО «Леруа Мерлен ЮФО»</p>
-                  </div></div>
+                    <div class="clients_img review_info__inner">
+                      <img src="./src/assets/img/clients_2.png" alt="Леруа мерлен" class="clients_img">
+                    </div>
+                    <div class="clients_text review_info__inner">
+                      <strong class="clients_name">Петренко С. А.</strong>
+                      <p class="clients_position">Управляющий ООО «Леруа Мерлен ЮФО»</p>
+                    </div>
+                  </div>
                   <div class="review_content">
                     Отзыв от компании «Леруа Мерлен». На российский рынок компания вышла в 2004 году, открыв первый магазин в городе Мытищи. Активное развитие сети началось с 2005 года. К 2006 году компания вышла на первое место среди DIY-сетей по ассортименту, обороту и объёму продаж на м². Гипермаркеты «Леруа Мерлен» зачастую организуются на одних площадках с «Ашан», их площадь колеблется от 8000 до 20 000 м².
                   </div>
@@ -376,8 +388,10 @@
               <div class="swiper-slide">
                 <div class="client_review">
                   <div class="review_info">
-                  <img src="./src/assets/img/clients_3.png" alt="SGT" class="clients_img">
-                  <div class="clients_text">
+                    <div class="clients_img review_info__inner">
+                      <img src="./src/assets/img/clients_3.png" alt="SGT" class="clients_img">
+                    </div>
+                  <div class="clients_text review_info__inner">
                     <strong class="clients_name">Фамилия И. О.</strong>
                     <p class="clients_position">Управляющий SGT</p>
                   </div>
@@ -390,8 +404,10 @@
               <div class="swiper-slide">
                 <div class="client_review">
                   <div class="review_info">
-                    <img src="./src/assets/img/clients_4.png" alt="LUKOIL" class="clients_img">
-                    <div class="clients_text">
+                    <div class="clients_img review_info__inner">
+                      <img src="./src/assets/img/clients_4.png" alt="LUKOIL" class="clients_img">
+                    </div>
+                    <div class="clients_text review_info__inner">
                       <strong class="clients_name">Фамилия И. О.</strong>
                       <p class="clients_position">Управляющий LUKOIL</p>
                     </div>
@@ -404,8 +420,10 @@
               <div class="swiper-slide">
                 <div class="client_review">
                   <div class="review_info">
-                  <img src="./src/assets/img/clients_5.png" alt="ПСБ" class="clients_img">
-                  <div class="clients_text">
+                    <div class="clients_img review_info__inner">
+                      <img src="./src/assets/img/clients_5.png" alt="ПСБ" class="clients_img">
+                    </div>
+                  <div class="clients_text review_info__inner">
                     <strong class="clients_name">Фамилия И. О.</strong>
                     <p class="clients_position">Управляющий ПСБ</p>
                   </div>
@@ -418,8 +436,10 @@
               <div class="swiper-slide">
                 <div class="client_review">
                   <div class="review_info">
-                    <img src="./src/assets/img/clients_6.png" alt="Северсталь" class="clients_img">
-                    <div class="clients_text">
+                    <div class="clients_img review_info__inner">
+                      <img src="./src/assets/img/clients_6.png" alt="Северсталь" class="clients_img">
+                    </div>
+                    <div class="clients_text review_info__inner">
                       <strong class="clients_name">Фамилия И. О.</strong>
                       <p class="clients_position">Управляющий Северсталь</p>
                     </div>
@@ -432,8 +452,10 @@
               <div class="swiper-slide">
                 <div class="client_review">
                   <div class="review_info">
-                    <img src="./src/assets/img/clients_7.png" alt="Каустик" class="clients_img">
-                    <div class="clients_text">
+                    <div class="clients_img review_info__inner">
+                      <img src="./src/assets/img/clients_7.png" alt="Каустик" class="clients_img">
+                    </div>
+                    <div class="clients_text review_info__inner">
                       <strong class="clients_name">Фамилия И. О.</strong>
                       <p class="clients_position">Управляющий Каустик</p>
                     </div>
@@ -446,8 +468,10 @@
               <div class="swiper-slide">
                 <div class="client_review">
                   <div class="review_info">
-                    <img src="./src/assets/img/clients_8.png" alt="СовКомБанк" class="clients_img">
-                    <div class="clients_text">
+                    <div class="clients_img review_info__inner">
+                      <img src="./src/assets/img/clients_8.png" alt="СовКомБанк" class="clients_img">
+                    </div>
+                    <div class="clients_text review_info__inner">
                       <strong class="clients_name">Фамилия И. О.</strong>
                       <p class="clients_position">Управляющий СовКомБанк</p>
                     </div>
@@ -494,50 +518,70 @@
       <section id="contacts" class="contacts">
         <div class="container">
           <h2 class="section_title">Контакты</h2>
-          <div class="contacts_inner">
+          <div class="contacts_wrapper">
             <div class="contacts_info">
               <div class="contacts_phone">
-                <span class="contacts_phone_title">8 800 123-45-67</span>
-                <span class="contacts_phone_text">+7 123 456-78-90</span>
+                <p>8 800 123-45-67</p>
+                <p>+7 123 456-78-90</p>
               </div>
-              <div class="contacts_address">
-                <strong class="contacts_title">Адрес</strong>
-                <span class="contacts_address_text">Московская обл., г. Химки, а/п Шереметьево, 
-                  терминал А</span>
+              <div class="contacts_inner">
+                <strong class="contacts_inner_title">Адрес</strong>
+                <p class="contacts_inner_text">Московская обл., г. Химки, а/п Шереметьево, 
+                  терминал А</p>
               </div>
-            </div>
-              <div class="contacts_email">
-                <strong class="contacts_title">E-mail</strong>
-                <span class="contacts_schedule_text">mail@jetair.ru</span>
+              <div class="contacts_inner">
+                <strong class="contacts_inner_title">E-mail</strong>
+                <p class="contacts_inner_text">mail@jetair.ru</p>
               </div>
             </div>
             <div class="contacts_map">
-              <div style="position:relative;overflow:hidden;">
-                <a href="https://yandex.ru/maps/org/mezhdunarodny_aeroport_sheremetyevo_terminal_a/1079286992/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">
-                  Международный аэропорт Шереметьево, терминал А
-                </a>
-                <a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/category/airport_terminal/206650152999/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
-                  Терминал аэропорта в Москве и Московской области
-                </a>
-                <iframe src="https://yandex.ru/map-widget/v1/?ll=37.444018%2C55.973925&mode=search&oid=1079286992&ol=biz&sctx=ZAAAAAgDEAAaKAoSCQHcLF4sQkZAESkGSDSBWkhAEhIJWaSJd4Cn5D8RXwmkxK7tzT8iBgABAgMEBSgKOABAoocGSAFqAnJ1nQHNzMw9oAEAqAEAvQGmN6MawgEkypmOjQTQudKCBPuZ8OgDuOOH%2FwOzlY2AqQSj5e68BL%2FIxawZggIW0YjQtdGA0LXQvNC10YLRjNC10LLQvooCAJICAJoCDGRlc2t0b3AtbWFwcw%3D%3D&sll=37.444018%2C55.973925&sspn=0.132931%2C0.051272&text=%D1%88%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%82%D1%8C%D0%B5%D0%B2%D0%BE&z=13.95" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
-                </iframe>
-              </div>
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9069d04954ab1e3779417cab08f6f26923b7767c7bf45e2507b34e8663c14d20&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="form" class="form">
+      <section id="form" class="section_form">
         <div class="container">
-          <h2 class="section_title">Забронировать частный борт</h2>
-          <form action="" class="bottom_form form">
+          <form action="" class="form" id="reservationForm2">
+            <h2 class="form_title title">Забронировать частный борт</h2>
             <fieldset>
-              <input type="text" placeholder="Имя" />
-            <input type="text" placeholder="Компания" />
-            <input type="tel" placeholder="Телефон" />
-            <button type="submit">Забронировать</button>
+              <div class="form_group">
+                <input type="text" placeholder="Имя" class="form_input" id="name2" />
+                <div class="form_error" id="nameError2">Пожалуйста, введите ваше имя</div>
+              </div>
+              <div class="form_group">
+                <input type="text" placeholder="Компания" class="form_input"  />
+              </div>
+              <div class="form_group">
+                <input type="tel"
+                       placeholder="Телефон"
+                       class="form_input" 
+                       id="phone2" 
+                       inputmode="numeric" 
+                />
+                <div class="form_error" id="phoneError2">Пожалуйста, введите корректный телефон в формате +7 (___) ___-__-__</div>
+              </div>
+              <div class="form_group">
+                <button  type="button"
+                         class="form_button"
+                         onclick="validateForm('reservationForm2')">
+                  Забронировать
+                </button>
+              </div>
             </fieldset>
-            <input type="checkbox" name="agreement" id="agreement_bottom">
-            <label for="agreement_bottom">Я даю согласие на обработку своих <a href="#" target="_blank" rel="noopener noreferrer" class="agreement_link">персональных данных</a></label>
+            <div class="checkbox-group">
+              <label class="form_agreement">
+                <input type="checkbox" name="agreement" id="agreement2" class="form_checkbox" />
+                <span>
+                  Я даю согласие на обработку своих 
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="agreement_link">
+                    персональных данных
+                  </a>
+                </span>
+              </label>
+              <div class="form_error" id="agreeError2">Необходимо ваше согласие</div>
+            </div>
           </form>
         </div>
       </section>
@@ -550,6 +594,8 @@
         </div>
       </div>
     </footer>
+
+    
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
